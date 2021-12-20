@@ -1,19 +1,18 @@
 import React from "react";
-import * as S from "./App.styles";
-import InputForm from "./components/InputForm";
-import TodoList from "./components/TodoList";
+import {Routes} from "react-router";
+import {Route} from "react-router";
 
-
+import Home from "./Home";
+import ShopContainer from "./components/Shop/ShopContainer"
+import TodoContainer from "./components/Todo/TodoContainer";
 
 function App() {
   return (
-    <S.Container>
-        <S.Wrapper>
-            <h2>Redux Tutorial</h2>
-            <InputForm/>
-            <TodoList/>
-        </S.Wrapper>
-    </S.Container>
+      <Routes>
+          <Route path = '/'     element = {<Home/>}/>
+          <Route path ='/shop'  element = {<ShopContainer/>}/>
+          <Route path = '/todo' element = {<TodoContainer/>}/>
+      </Routes>
   );
 }
 

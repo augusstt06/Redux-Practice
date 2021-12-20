@@ -1,6 +1,6 @@
 import React from "react";
 
-import * as S from "./TodoList.style";
+import * as S from "./TodoList.style"
 
 import TodoItem from "./TodoItem";
 import {useSelector} from "react-redux";

@@ -3,7 +3,7 @@ import React from "react";
 import {useDispatch} from "react-redux";
 
 import * as S from "./TodoItem.style";
-import {delete_todo} from "../redux/actios";
+import {delete_todo} from "../../../redux/actions";
 
 const TodoItem = ({todo}) => {
     // Todo를 삭제하는  DELTE action을 dispatch 한다.

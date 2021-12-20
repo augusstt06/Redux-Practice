@@ -1,5 +1,4 @@
-import React from "react";
-import {ADD_TODO, DELETE_TODO} from "./actios";
+import {ADD_TODO, DELETE_TODO} from "./actions";
 
 
 // 초기 state를 정의한다.
@@ -14,14 +13,11 @@ export const reducer = (state = initialState, action) => {
             return {
                 todos : [...state.todos, action.todo]
             };
-            break;
         case DELETE_TODO :
             return {
                 todos : [...state.todos.filter((todo) => todo.id !== action.id)]
             };
-            break;
         default :
             return state;
-            break;
     }
 }
