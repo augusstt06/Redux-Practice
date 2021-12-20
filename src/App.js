@@ -1,9 +1,19 @@
+import React from "react";
+import * as S from "./App.styles";
+import InputForm from "./components/InputForm";
+import TodoList from "./components/TodoList";
 
-import './App.css';
+
 
 function App() {
   return (
-    <div></div>
+    <S.Container>
+        <S.Wrapper>
+            <h2>Redux Tutorial</h2>
+            <InputForm/>
+            <TodoList/>
+        </S.Wrapper>
+    </S.Container>
   );
 }
 
