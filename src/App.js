@@ -2,16 +2,14 @@ import React from "react";
 import {Routes} from "react-router";
 import {Route} from "react-router";
 
-import Home from "./Home";
-import ShopContainer from "./components/Shop/ShopContainer"
-import TodoContainer from "./components/Todo/TodoContainer";
+import Main from "./component/Main";
+import Counter from "./component/counter/Counter";
 
 function App() {
   return (
       <Routes>
-          <Route path = '/'     element = {<Home/>}/>
-          <Route path ='/shop'  element = {<ShopContainer/>}/>
-          <Route path = '/todo' element = {<TodoContainer/>}/>
+          <Route path='/' element={<Main/>}/>
+          <Route path='/counter' element={<Counter/>}/>
       </Routes>
   );
 }
