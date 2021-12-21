@@ -1,7 +1,7 @@
 import React from "react";
 import {useDispatch, useSelector} from "react-redux";
+import {plus_num, minus_num, reset_num} from "../../module/counterModule";
 
-import {plus_num, minus_num, reset_num} from "../../module/action/counterAction";
 
 const Counter = () => {
     const dispatch = useDispatch();

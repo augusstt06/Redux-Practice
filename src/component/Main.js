@@ -1,18 +1,18 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {click_goTrue, click_goFalse} from "../module/action/mainAction";
+import {click_true, click_false} from "../module/mainModule";
 import {useSelector,useDispatch} from "react-redux";
 
 
 const Main = () => {
     const current = useSelector(state => state.mainReducer)
-    console.log(current)
+    console.log(useSelector(state => state))
     const dispatch = useDispatch();
     const clickTrue = () => {
-        dispatch(click_goTrue());
+        dispatch(click_true());
     };
     const clickFalse = () => {
-        dispatch(click_goFalse());
+        dispatch(click_false());
     }
     return (
         <div>
@@ -21,9 +21,9 @@ const Main = () => {
             <br/>
             <h3>{current}</h3>
             {current === "false" ?
-            <button onClick={clickTrue}>Click!</button>
+            <button onClick={clickFalse}>Change to True?</button>
             :
-            <button onClick={clickFalse}>Click!</button>
+            <button onClick={clickTrue}>Change to False?</button>
             }
             <br/><br/>
             <Link to ='/counter'>
